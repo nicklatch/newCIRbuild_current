@@ -14,7 +14,7 @@ const Root = () => {
 
   return (
     <>
-      <div className='flex flex-col items-stretch justify-between max-w-7xl min-w-screen min-h-screen p-8 sm:py-8 sm:pt-10 sm:pb-2 relative mx-auto bg-gradient-to-b from-base-200 to-neutral'>
+      <div className='flex flex-col items-stretch justify-between max-w-7xl min-w-screen min-h-screen p-8 shadow-inner sm:py-8 sm:pt-10 sm:pb-2 relative mx-auto sm:ring-2 sm:ring-primary sm:shadow-2xl sm:shadow-primary'>
         <header className='flex justify-between items-center mb-2'>
           <Link to={'/'}>
             <p className='text-4xl font-bold text-center p-0 indent-0'>

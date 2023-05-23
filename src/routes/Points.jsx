@@ -1,36 +1,36 @@
 import { useState, useEffect } from 'react';
 import pointsService from '../services/pointsService';
+import PointsTable from '../components/PointsTable';
 
 const Points = () => {
   console.log('render');
-  const [allData, setAllData] = useState([]);
-  const [fwdData, setFwdData] = useState([]);
+  const [fwdDrivers, setFwdDrivers] = useState([]);
+  const [rwdDrivers, setRwdDrivers] = useState([]);
+  const [fwdIsLoaded, setFwdIsLoaded] = useState(false);
+  const [rwdIsLoaded, setRwdIsLoaded] = useState(false);
 
   useEffect(() => {
-    pointsService.getAll().then((data) => setAllData(data));
+    setFwdIsLoaded(false);
+    pointsService.getAllFwd().then((data) => {
+      setFwdDrivers(data);
+      setFwdIsLoaded(true);
+    });
   }, []);
 
-  const fwd = allData.fwdDrivers;
+  useEffect(() => {
+    setRwdIsLoaded(false);
+    pointsService.getAllRwd().then((data) => {
+      setRwdDrivers(data);
+      setRwdIsLoaded(true);
+    });
+  }, []);
 
-  console.log(fwd);
-
-  function pointsSorting(a, b) {
-    return a.points - b.points;
-  }
-
-  console.log(fwd.sort(pointsSorting));
-
-  return (
+  return !fwdIsLoaded || !rwdIsLoaded ? (
+    <div>Loading...</div>
+  ) : (
     <>
-      <h1>Points</h1>
-      <div>
-        <h2>FWD</h2>
-        <table>
-          <thead>
-            <tr>{}</tr>
-          </thead>
-        </table>
-      </div>
+      <PointsTable classHeading='Front Wheel Drive' driverData={fwdDrivers} />
+      <PointsTable classHeading='Rear Wheel Drive' driverData={rwdDrivers} />
     </>
   );
 };

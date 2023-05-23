@@ -1,12 +1,16 @@
 import axios from 'axios';
-const baseUrl = 'http://localhost:3000/all';
+const baseUrl = 'http://localhost:3000';
 
 //TODO: create services for fetching points
 
-const getAll = async () => {
-  const response = await axios.get(baseUrl);
-  console.log('from services', response.data);
+const getAllFwd = async () => {
+  const response = await axios.get(`${baseUrl}/fwdDrivers`);
   return response.data;
 };
 
-export default { getAll };
+const getAllRwd = async () => {
+  const response = await axios.get(`${baseUrl}/rwdDrivers`);
+  return response.data;
+};
+
+export default { getAllFwd, getAllRwd };
