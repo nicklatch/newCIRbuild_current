@@ -3,10 +3,7 @@ const PointsTable = ({ driverData, classHeading }) => {
 
   return (
     <>
-      <h1 className='text-xl font-bold sm:text-3xl text-center mb-1'>
-        {classHeading}
-      </h1>
-      <div className='overflow-x-auto border-b-4 border-primary mb-2'>
+      <div className='overflow-x-auto overflow-y-auto mb-2 ring-2 ring-neutral rounded-md text-white sm:max-h-[45rem] max-h-96'>
         <table className='table w-full'>
           <thead>
             <tr>
@@ -20,8 +17,8 @@ const PointsTable = ({ driverData, classHeading }) => {
           <tbody>
             {driverData.map((driver) => {
               return (
-                <tr>
-                  <th key={driver.id}>{driverData.indexOf(driver) + 1}</th>
+                <tr key={driver.id}>
+                  <th>{driverData.indexOf(driver) + 1}</th>
                   <td>{driver.number}</td>
                   <td>{driver.name}</td>
                   <td>{driver.address}</td>
