@@ -15,7 +15,7 @@ const Root = () => {
 
   return (
     <>
-      <div className='flex flex-col items-stretch justify-between max-w-7xl min-w-screen min-h-screen sm:px-8 shadow-inner p-6 relative mx-auto sm:ring-2 sm:ring-primary sm:shadow-2xl sm:shadow-primary'>
+      <div className='flex flex-col items-stretch justify-between max-w-7xl min-w-screen min-h-screen sm:px-8 shadow-inner p-6 relative mx-auto'>
         <Navbar />
         <main>{currentLocation.pathname === '/' ? <Hero /> : <Outlet />}</main>
         <Footer />

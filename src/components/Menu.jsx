@@ -8,7 +8,7 @@ const Menu = () => {
     document.activeElement.blur();
   };
   return (
-    <div className='dropdown dropdown-bottom dropdown-end' ref={dropdown}>
+    <div className='dropdown dropdown-bottom sm:dropdown-left' ref={dropdown}>
       <label
         tabIndex={0}
         className='btn btn-primary m-1 rounded-md drop-shadow-md'
@@ -25,26 +25,41 @@ const Menu = () => {
       </label>
       <ul
         tabIndex={0}
-        className='dropdown-content menu justify-center items-center p-none max-w-fit shadow bg-base-100 w-fit rounded-md'
+        className='dropdown-content menu justify-center items-center p-none max-w-fit shadow-custom bg-base-100 w-fit rounded-md shadow-black/20'
       >
         <li>
           <Link to={'/'}>
-            <button name='home'>Home</button>
+            <button onClick={handleClick} name='home'>
+              Home
+            </button>
           </Link>
         </li>
         <li>
           <Link to={'/points'}>
-            <button name='points'>Points</button>
+            <button onClick={handleClick} name='points'>
+              Points
+            </button>
           </Link>
         </li>
         <li>
           <Link to={'/rules'}>
-            <button name='rules'>Rules</button>
+            <button onClick={handleClick} name='rules'>
+              Rules
+            </button>
           </Link>
         </li>
         <li>
           <Link to={'/about'}>
-            <button name='about'>About</button>
+            <button onClick={handleClick} name='about'>
+              About
+            </button>
+          </Link>
+        </li>
+        <li>
+          <Link to={'/schedule'}>
+            <button onClick={handleClick} name='schedule'>
+              Schedule
+            </button>
           </Link>
         </li>
       </ul>

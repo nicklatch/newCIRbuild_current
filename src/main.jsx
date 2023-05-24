@@ -6,6 +6,7 @@ import ErrorPage from './errorPage';
 import About from './routes/About';
 import Points from './routes/Points';
 import Rules from './routes/Rules';
+import Schedule from './routes/Schedule';
 import './index.css';
 
 const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: 'rules',
         element: <Rules />,
+      },
+      {
+        path: 'schedule',
+        element: <Schedule />,
       },
     ],
   },

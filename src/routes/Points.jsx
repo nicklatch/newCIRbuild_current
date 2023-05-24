@@ -30,6 +30,9 @@ const Points = () => {
     <div className='flex justify-center items-center text-5xl'>Loading...</div>
   ) : (
     <>
+      <h1 className='text-6xl sm:text-4xl text-center my-4 text-white font-bold'>
+        Points
+      </h1>
       <Tabs setIsActive={setIsActive} />
       {isActive === 'fwd' ? (
         <PointsTable classHeading='Front Wheel Drive' driverData={fwdDrivers} />

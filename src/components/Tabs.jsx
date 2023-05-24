@@ -9,7 +9,7 @@ const Tabs = ({ setIsActive }) => {
   };
 
   return (
-    <div className='tabs pr-2 pb-0.5'>
+    <div className='tabs pr-2 pb-0.5 font-bold text-lg'>
       <button
         name='fwd'
         className={`tab tab-lifted ${
