@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const Tabs = ({ setIsActive }) => {
   const [activeTab, setActiveTab] = useState('fwd');
@@ -9,10 +10,10 @@ const Tabs = ({ setIsActive }) => {
   };
 
   return (
-    <div className='tabs pr-2 pb-0.5 font-bold text-lg'>
+    <div className='tabs pb-0.5 pr-2 text-lg font-bold'>
       <button
         name='fwd'
-        className={`tab tab-lifted ${
+        className={`tab-lifted tab ${
           activeTab === 'fwd' ? 'tab-active' : null
         }`}
         onClick={handleTab}
@@ -21,7 +22,7 @@ const Tabs = ({ setIsActive }) => {
       </button>
       <button
         name='rwd'
-        className={`tab tab-lifted ${
+        className={`tab-lifted tab ${
           activeTab === 'rwd' ? 'tab-active' : null
         }`}
         onClick={handleTab}
@@ -30,6 +31,10 @@ const Tabs = ({ setIsActive }) => {
       </button>
     </div>
   );
+};
+
+Tabs.propTypes = {
+  setIsActive: PropTypes.func.isRequired,
 };
 
 export default Tabs;

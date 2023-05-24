@@ -3,12 +3,12 @@ import Menu from './Menu';
 
 const Navbar = () => {
   return (
-    <header className='navbar ring-2 ring-primary shadow-custom shadow-primary rounded-md bg-base-200 flex justify-between px-6 items-center mb-4 text-white'>
+    <header className='navbar mb-4 flex items-center justify-between rounded-md bg-base-200 px-6 text-white shadow-custom shadow-primary ring-2 ring-primary'>
       <Link to={'/'}>
-        <div className='hidden font-primary text-7xl m-1 sm:block'>
+        <div className='m-1 hidden font-primary text-7xl sm:block'>
           Chetek Ice Racing
         </div>
-        <div className='font-primary text-9xl m-1 sm:hidden'>CIR</div>
+        <div className='m-1 font-primary text-9xl sm:hidden'>CIR</div>
       </Link>
       <nav>
         <Menu />

@@ -1,21 +1,14 @@
-import { useRef } from 'react';
-import { Link, Outlet, useLocation } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
 const Root = () => {
-  const dropdown = useRef();
-  const handleClick = () => {
-    dropdown.current.classList.toggle('dropdown-open');
-    document.activeElement.blur();
-  };
-
   const currentLocation = useLocation();
 
   return (
     <>
-      <div className='flex flex-col items-stretch justify-between max-w-7xl min-w-screen min-h-screen sm:px-8 shadow-inner p-6 relative mx-auto'>
+      <div className='min-w-screen relative mx-auto flex min-h-screen max-w-7xl flex-col items-stretch justify-between p-6 shadow-inner sm:px-8'>
         <Navbar />
         <main>{currentLocation.pathname === '/' ? <Hero /> : <Outlet />}</main>
         <Footer />

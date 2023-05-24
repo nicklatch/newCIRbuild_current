@@ -8,10 +8,10 @@ const Menu = () => {
     document.activeElement.blur();
   };
   return (
-    <div className='dropdown dropdown-bottom sm:dropdown-left' ref={dropdown}>
+    <div className='dropdown-bottom dropdown sm:dropdown-left' ref={dropdown}>
       <label
         tabIndex={0}
-        className='btn btn-primary m-1 rounded-md drop-shadow-md'
+        className='btn-primary btn m-1 rounded-md drop-shadow-md'
         onClick={handleClick}
       >
         <svg
@@ -25,7 +25,7 @@ const Menu = () => {
       </label>
       <ul
         tabIndex={0}
-        className='dropdown-content menu justify-center items-center p-none max-w-fit shadow-custom bg-base-100 w-fit rounded-md shadow-black/20'
+        className='p-none dropdown-content menu w-fit max-w-fit items-center justify-center rounded-md bg-base-100 shadow-custom shadow-black/20'
       >
         <li>
           <Link to={'/'}>

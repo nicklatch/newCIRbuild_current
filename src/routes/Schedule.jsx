@@ -1,7 +1,7 @@
 const Schedule = () => {
   return (
     <>
-      <div className='flex justify-center items-center text-6xl m-auto'>
+      <div className='m-auto flex items-center justify-center text-6xl'>
         Schedule
       </div>
     </>

@@ -1,17 +1,17 @@
 const About = () => {
   return (
-    <main className='min-h-full max-w-full flex flex-col items-center sm:grid sm:grid-cols-2 auto-rows-auto gap-y-20'>
-      <h1 className='text-6xl col-span-full row-span-1 row-start-1 justify-self-center mt-6 font-bold'>
+    <main className='flex min-h-full max-w-full auto-rows-auto flex-col items-center gap-y-20 sm:grid sm:grid-cols-2'>
+      <h1 className='col-span-full row-span-1 row-start-1 mt-6 justify-self-center text-6xl font-bold'>
         About
       </h1>
       <div
         id='roots'
-        className='shadow-custom shadow-primary overflow-hidden col-start-1 col-span-1 row-start-2 row-span-1 flex flex-col bg-neutral rounded-md ring-2 ring-neutral'
+        className='col-span-1 col-start-1 row-span-1 row-start-2 flex flex-col overflow-hidden rounded-md bg-neutral shadow-custom shadow-primary ring-2 ring-neutral'
       >
-        <h2 className='text-3xl bg-base-200 text-center p-1'>
+        <h2 className='bg-base-200 p-1 text-center text-3xl'>
           Stuff Goes Here
         </h2>
-        <p className='text-center p-1'>
+        <p className='p-1 text-center'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolores
           neque, aliquam velit consectetur optio corrupti ullam quam magnam
           facere alias excepturi quod necessitatibus iste animi itaque labore
@@ -20,9 +20,9 @@ const About = () => {
       </div>
       <div
         id='labor'
-        className='shadow-custom shadow-primary overflow-hidden col-start-2 col-span-1 row-start-3 row-span-1 flex flex-col bg-neutral rounded-md ring-2 ring-neutral'
+        className='col-span-1 col-start-2 row-span-1 row-start-3 flex flex-col overflow-hidden rounded-md bg-neutral shadow-custom shadow-primary ring-2 ring-neutral'
       >
-        <h2 className='text-3xl bg-base-200 text-center p-1'>
+        <h2 className='bg-base-200 p-1 text-center text-3xl'>
           Stuff Goes Here
         </h2>
         <p className='text-center'>

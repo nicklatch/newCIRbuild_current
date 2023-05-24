@@ -27,10 +27,10 @@ const Points = () => {
   }, []);
 
   return !fwdIsLoaded || !rwdIsLoaded ? (
-    <div className='flex justify-center items-center text-5xl'>Loading...</div>
+    <div className='flex items-center justify-center text-5xl'>Loading...</div>
   ) : (
     <>
-      <h1 className='text-6xl sm:text-4xl text-center my-4 text-white font-bold'>
+      <h1 className='my-4 text-center text-6xl font-bold text-white sm:text-4xl'>
         Points
       </h1>
       <Tabs setIsActive={setIsActive} />

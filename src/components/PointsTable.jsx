@@ -1,8 +1,10 @@
-const PointsTable = ({ driverData, classHeading }) => {
+import PropTypes from 'prop-types';
+
+const PointsTable = ({ driverData }) => {
   driverData.sort((aDriver, bDriver) => bDriver.points - aDriver.points);
   return (
     <>
-      <div className='overflow-x-auto overflow-y-auto mb-2 ring-2 ring-neutral rounded-md text-white sm:max-h-[45rem] max-h-[35rem]'>
+      <div className='mb-2 max-h-[35rem] overflow-x-auto overflow-y-auto rounded-md text-white ring-2 ring-neutral sm:max-h-[45rem]'>
         <table className='table w-full'>
           <thead>
             <tr key='headerRow'>
@@ -28,6 +30,10 @@ const PointsTable = ({ driverData, classHeading }) => {
       </div>
     </>
   );
+};
+
+PointsTable.propTypes = {
+  driverData: PropTypes.array.isRequired,
 };
 
 export default PointsTable;
