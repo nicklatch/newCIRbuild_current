@@ -22,6 +22,7 @@ const router = createBrowserRouter([
       {
         path: 'points',
         element: <Points />,
+        errorElement: <ErrorPage />,
       },
       {
         path: 'rules',
