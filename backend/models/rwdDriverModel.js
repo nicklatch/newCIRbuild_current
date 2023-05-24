@@ -19,6 +19,10 @@ const rwdDriverSchema = new mongoose.Schema({
     required: true,
     minLength: 4,
   },
+  createdBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+  },
 });
 rwdDriverSchema.plugin(uniqueValidator);
 
