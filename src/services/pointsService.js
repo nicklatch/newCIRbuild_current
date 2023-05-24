@@ -1,6 +1,6 @@
 // import axios from 'axios';
-import fwdData from '../../fwdDrivers.json';
-import rwdData from '../../rwdDrivers.json';
+import fwdData from '../assets/fwdDrivers.json';
+import rwdData from '../assets/rwdDrivers.json';
 //TODO: create services for fetching points
 
 const getAllFwd = async () => {
