@@ -1,4 +1,4 @@
-require('dotenv').config;
+require('dotenv').config();
 require('express-async-errors');
 const express = require('express');
 const app = express();
@@ -8,8 +8,8 @@ const middleware = require('./utils/middleware');
 const logger = require('./utils/logger');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
-const rwdRouter = require('./controllers/rwdDriverController');
-const fwdRouter = require('./controllers/fwdDriverController');
+const rwdDriverRouter = require('./controllers/rwdDrivers');
+const fwdDriverRouter = require('./controllers/fwdDrivers');
 
 mongoose.set('strictQuery', false);
 
@@ -26,8 +26,8 @@ app.use(cors());
 app.use(express.static('dist'));
 app.use(express.json());
 app.use(morgan('tiny'));
-app.use('/api/rwdDrivers', rwdRouter);
-app.use('/api/fwdDrivers', fwdRouter);
+app.use('/api/fwdDrivers', fwdDriverRouter);
+app.use('/api/rwdDrivers', rwdDriverRouter);
 app.use(middleware.unknownEndpoint);
 app.use(middleware.errorHandler);
 
