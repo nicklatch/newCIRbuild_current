@@ -1,8 +1,6 @@
 import axios from 'axios';
-const FwdBaseUrl = 'http://localhost:3001/api/fwdDrivers'
-const RwdBaseUrl = 'http://localhost:3001/api/rwdDrivers'
-
-//TODO: create services for fetching points
+const FwdBaseUrl = 'http://localhost:3001/api/fwdDrivers';
+const RwdBaseUrl = 'http://localhost:3001/api/rwdDrivers';
 
 const getAllFwd = async () => {
   const response = await axios.get(FwdBaseUrl);
