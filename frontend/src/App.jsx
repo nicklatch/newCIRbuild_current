@@ -9,9 +9,9 @@ import Schedule from './pages/Schedule';
 
 const App = () => {
   return (
-    <>
+    <div className="grid h-screen grid-rows-[auto_1fr_auto] px-4 py-2">
       <Navbar />
-      <main className="mx-auto my-auto">
+      <main className="m-8 flex h-full items-center justify-center">
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/points" element={<Points />} />
@@ -21,7 +21,7 @@ const App = () => {
         </Routes>
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

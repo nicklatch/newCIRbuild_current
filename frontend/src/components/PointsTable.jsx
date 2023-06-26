@@ -4,10 +4,10 @@ const PointsTable = ({ driverData }) => {
   driverData.sort((aDriver, bDriver) => bDriver.points - aDriver.points);
   return (
     <>
-      <div className='mb-2 max-h-[35rem] overflow-x-auto overflow-y-auto rounded-md text-white ring-2 ring-neutral sm:max-h-[45rem]'>
-        <table className='table w-full'>
+      <div className="mb-2 max-h-[35rem] overflow-x-auto overflow-y-auto rounded-md text-white ring-2 ring-neutral sm:max-h-[45rem]">
+        <table className="table w-full">
           <thead>
-            <tr key='headerRow'>
+            <tr key="headerRow">
               <th>Pos.</th>
               <th>#</th>
               <th>Driver</th>
